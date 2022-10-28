@@ -8,6 +8,8 @@
 
 .Collapsible {
   background-color: white;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .Collapsible__contentInner {
@@ -40,7 +42,7 @@ hr {
   position: relative;
   border: 1px solid white;
   padding: 10px;
-  background: #00ac9d;
+  background: #202020;
   color: white;
 }
 .Collapsible__trigger:after {
@@ -86,6 +88,21 @@ td {
   padding: 10px;
 }
 
+.td-1 {
+  width: 120px;
+}
+
+.td-2 {
+  width: 250px;
+}
+
 tr:nth-child(even) {
   background-color: #f0f0f0;
+}
+
+.heading {
+  background-color: #282828;
+  color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
