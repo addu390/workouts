@@ -7,7 +7,6 @@ export const Workouts = () => {
     return (
         <>
             <div className="workout-container">
-            <br/>
                 {allWorkouts.map((data, key) => {
                     return (
                         <div key={key}>
