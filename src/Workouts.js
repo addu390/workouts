@@ -38,7 +38,7 @@ export const Workouts = () => {
                                                         </table>
                                                     </div>
 
-                                                    <br />
+                                                    <br/>
 
                                                     <div>
                                                         <table>
@@ -46,7 +46,7 @@ export const Workouts = () => {
                                                             <tr>
                                                                 <th>Sl No.</th>
                                                                 <th className="td-2">Workout</th>
-                                                                <th className="td-1">Count</th>
+                                                                <th className="td-1">Reps</th>
                                                             </tr>
                                                             {day.main?.workouts.map((workout, idx) => (
                                                                 <tr key={idx}>
@@ -55,12 +55,14 @@ export const Workouts = () => {
                                                                         <span>{workout.name}</span>
                                                                         <p className="p_space">{workout.description}</p>
                                                                     </td>
-                                                                    <td>{workout.sets} * {workout.reps} {workout.each_side ? EACH_SIDE: "" }</td>
+                                                                    <td>{workout.sets} x {workout.reps} {workout.each_side ? EACH_SIDE: "" }</td>
                                                                 </tr>
                                                             ))
                                                             }
                                                         </table>
                                                     </div>
+
+                                                    <br/>
 
                                                     <div>
                                                         <table>
@@ -83,6 +85,7 @@ export const Workouts = () => {
                                                             }
                                                         </table>
                                                     </div>
+
                                                 </Collapsible>))
                                             }
                                         </div>

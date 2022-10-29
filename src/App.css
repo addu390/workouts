@@ -45,7 +45,8 @@ hr {
 }
 .Collapsible__trigger:after {
   font-family: "FontAwesome";
-  content: "\f107";
+  content: "ᐯ";
+  font-size: 10px;
   position: absolute;
   right: 10px;
   top: 10px;
