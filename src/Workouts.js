@@ -17,28 +17,30 @@ export const Workouts = () => {
                                             {week.days.map((day, kdx) => (
                                                 <Collapsible className="day" trigger={day.name + ": " + day.main?.name} key={kdx}>
                                                     <div>
-                                                        <table>
-                                                            <caption className="heading">{day.pre?.name}</caption>
-                                                            <tr>
-                                                                <th>Sl No.</th>
-                                                                <th className="td-2">Workout</th>
-                                                                <th className="td-1">Duration</th>
-                                                            </tr>
-                                                            {day.pre?.workouts.map((workout, idx) => (
-                                                                <tr key={idx}>
-                                                                    <td>{idx + 1}.</td>
-                                                                    <td>
-                                                                        <span>{workout.name}</span>
-                                                                        <p className="p_space">{workout.description}</p>
-                                                                    </td>
-                                                                    <td>{workout.duration} minutes</td>
+                                                        {day.hasOwnProperty("pre") &&
+                                                            <table>
+                                                                <caption className="heading">{day.pre?.name}</caption>
+                                                                <tr>
+                                                                    <th>Sl No.</th>
+                                                                    <th className="td-2">Workout</th>
+                                                                    <th className="td-1">Duration</th>
                                                                 </tr>
-                                                            ))
-                                                            }
-                                                        </table>
+                                                                {day.pre?.workouts.map((workout, idx) => (
+                                                                    <tr key={idx}>
+                                                                        <td>{idx + 1}.</td>
+                                                                        <td>
+                                                                            <span>{workout.name}</span>
+                                                                            <p className="p_space">{workout.description}</p>
+                                                                        </td>
+                                                                        <td>{workout.duration} minutes</td>
+                                                                    </tr>
+                                                                ))
+                                                                }
+                                                            </table>
+                                                        }
                                                     </div>
 
-                                                    <br/>
+                                                    <br />
 
                                                     <div>
                                                         <table>
@@ -55,35 +57,37 @@ export const Workouts = () => {
                                                                         <span>{workout.name}</span>
                                                                         <p className="p_space">{workout.description}</p>
                                                                     </td>
-                                                                    <td>{workout.sets} x {workout.reps} {workout.each_side ? EACH_SIDE: "" }</td>
+                                                                    <td>{workout.sets} x {workout.reps} {workout.each_side ? EACH_SIDE : ""}</td>
                                                                 </tr>
                                                             ))
                                                             }
                                                         </table>
                                                     </div>
 
-                                                    <br/>
+                                                    <br />
 
                                                     <div>
-                                                        <table>
-                                                            <caption className="heading">{day.post?.name}: {day.post?.rounds} rounds</caption>
-                                                            <tr>
-                                                                <th>Sl No.</th>
-                                                                <th className="td-2">Workout</th>
-                                                                <th className="td-1">Reps</th>
-                                                            </tr>
-                                                            {day.post?.workouts.map((workout, idx) => (
-                                                                <tr key={idx}>
-                                                                    <td>{idx + 1}.</td>
-                                                                    <td>
-                                                                        <span>{workout.name}</span>
-                                                                        <p className="p_space">{workout.description}</p>
-                                                                    </td>
-                                                                    <td>{workout.reps} {workout.each_side ? EACH_SIDE: "" }</td>
+                                                        {day.hasOwnProperty("post") &&
+                                                            <table>
+                                                                <caption className="heading">{day.post?.name}: {day.post?.rounds} rounds</caption>
+                                                                <tr>
+                                                                    <th>Sl No.</th>
+                                                                    <th className="td-2">Workout</th>
+                                                                    <th className="td-1">Reps</th>
                                                                 </tr>
-                                                            ))
-                                                            }
-                                                        </table>
+                                                                {day.post?.workouts.map((workout, idx) => (
+                                                                    <tr key={idx}>
+                                                                        <td>{idx + 1}.</td>
+                                                                        <td>
+                                                                            <span>{workout.name}</span>
+                                                                            <p className="p_space">{workout.description}</p>
+                                                                        </td>
+                                                                        <td>{workout.reps} {workout.each_side ? EACH_SIDE : ""}</td>
+                                                                    </tr>
+                                                                ))
+                                                                }
+                                                            </table>
+                                                        }
                                                     </div>
 
                                                 </Collapsible>))
