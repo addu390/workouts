@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { allWorkouts } from "./data";
+import { allWorkouts, EACH_SIDE } from "./data";
 import Collapsible from 'react-collapsible';
 
 export const Workouts = () => {
@@ -55,7 +55,7 @@ export const Workouts = () => {
                                                                         <span>{workout.name}</span>
                                                                         <p className="p_space">{workout.description}</p>
                                                                     </td>
-                                                                    <td>{workout.sets} * {workout.reps}</td>
+                                                                    <td>{workout.sets} * {workout.reps} {workout.each_side ? EACH_SIDE: "" }</td>
                                                                 </tr>
                                                             ))
                                                             }
@@ -77,7 +77,7 @@ export const Workouts = () => {
                                                                         <span>{workout.name}</span>
                                                                         <p className="p_space">{workout.description}</p>
                                                                     </td>
-                                                                    <td>{workout.reps}</td>
+                                                                    <td>{workout.reps} {workout.each_side ? EACH_SIDE: "" }</td>
                                                                 </tr>
                                                             ))
                                                             }
