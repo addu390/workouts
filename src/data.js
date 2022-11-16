@@ -13,9 +13,9 @@ const DAY_SIX = "Day 6"
 // Workouts
 const UPPER_BODY = "Upper body"
 const LOWER_BODY = "Lower body"
+const LEGS_AND_TRICEPS = "Legs and Triceps"
 const BACK_AND_BICEPS = "Back and Biceps"
 const CHEST_AND_SHOULDERS = "Chest and Shoulders"
-const LEGS_AND_TRICEPS = "Legs and Triceps"
 const CORE = "Core"
 const WARM_UP = "Warm-up"
 
